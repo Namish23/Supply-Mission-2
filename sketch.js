@@ -31,7 +31,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.8, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -57,9 +57,9 @@ function draw() {
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
- /* packageSprite.collide(b1);
+  packageSprite.collide(b1);
   packageSprite.collide(b2);
-  packageSprite.collide(b3);*/
+  packageSprite.collide(b3);
   drawSprites();
  
 }
